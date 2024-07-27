@@ -1,2 +1,0 @@
-Hello this mohamed tasks file
-Make to do list app in python

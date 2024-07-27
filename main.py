@@ -21,6 +21,12 @@ def main():
 
 
 def check_user(userName, status):
+    """
+    string, char -> None
+
+    take the username and the status of the user to 
+    return the list of tasks or add a new task
+    """
     found = userName in users.get_users()
     if found and status == 'o':
         print(f'Hello, {userName}')

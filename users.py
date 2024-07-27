@@ -1,5 +1,3 @@
-# import csv
-
 # user functions file
 
 
@@ -30,6 +28,6 @@ def new_user(username: str) -> None:
     with open(f'./database/{username}.txt', 'w') as newFile:
         newFile.write(f'Hello this {username} tasks file')
 
-
+# for test do not need this now
 # print(new_user('mohamed'))
 # print(get_users())
