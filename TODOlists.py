@@ -15,7 +15,7 @@ def get_list(userName) -> list[str]:
     find(userName)
     with open(f'./database/{userName}.txt', 'r') as data:
         for row in data:
-            print(row)
+            print(row, end='')
 
 
 def add_task(userName: str) -> None:
@@ -24,7 +24,7 @@ def add_task(userName: str) -> None:
         newTask = input('Inter your new task... ')
         data.write(f'\n{newTask}')
         print('the task has been add successfully')
-        make_choice(userName)
+    make_choice(userName)
 
 
 def find(userName):
