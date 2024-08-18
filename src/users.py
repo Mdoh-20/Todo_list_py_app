@@ -7,7 +7,7 @@ def take_username() -> str:
     try:
         return input('Type your username to continue... ').lower().strip()
     except KeyboardInterrupt:
-        print('Somthing went wrong.')
+        print(' Something went wrong.')
         quit()
 
 def check_username(userName:str):
@@ -16,7 +16,7 @@ def check_username(userName:str):
         try:
             password = input('Inter your password... ')
         except KeyboardInterrupt:
-            print('Somthing went wrong.')
+            print(' Something went wrong.')
             quit()
         pas = cursor.execute('SELECT password FROM usersTable WHERE name = ?'
                              , (userName,))
@@ -40,7 +40,7 @@ def new_user(userName):
     try:
         password = input('Inter a password... ')
     except KeyboardInterrupt:
-        print('Somthing went wrong.')
+        print(' Something went wrong.')
         quit()
     cursor.execute('INSERT INTO usersTable (name, password) VALUES (?, ?)'
                    , (userName, password))
@@ -60,7 +60,7 @@ def user_not_found(userName: str) -> None:
         answer = input('Type "N" to register Or anything to try your username '
                        'again... ').lower().strip()
     except KeyboardInterrupt:
-        print('Somthing went wrong.')
+        print(' Something went wrong.')
         quit()
     if answer == 'n':
         new_user(userName)

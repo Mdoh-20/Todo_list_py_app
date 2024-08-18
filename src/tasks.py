@@ -62,7 +62,7 @@ def change_statu(userName):
             return edit_tasks(userName)
         statusUpdate = input('Update to... ')
     except KeyboardInterrupt:
-        print('Somthing went wrong.')
+        print(' Something went wrong.')
         quit()
     except ValueError:
         print('Invalid input')
